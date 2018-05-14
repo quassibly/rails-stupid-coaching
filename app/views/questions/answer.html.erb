@@ -1,0 +1,16 @@
+<div class="question">
+  <p><%= params['question'] %></p>
+  <p class="name"><%= "--You" %></p>
+</div>
+<div class="answer">
+  <% if params['question'] == 'I am going to work' %>
+    <p><%= "Great!" %></p>
+  <% elsif params['question'].last == '?' %>
+    <p><%= "Silly question, get dressed and go to work!" %></p>
+  <% else %>
+    <p><%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+  <p class="name"><%= "--Your coach" %></p>
+</div>
+
+<%= link_to "Ask a new question", ask_path %>
